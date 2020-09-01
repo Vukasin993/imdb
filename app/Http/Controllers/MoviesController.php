@@ -47,7 +47,20 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Movie::find($id);
+    
+        if (!$movie) {
+            return view('movie_not_found');
+        }
+
+        return view('movies.single', [
+            'id' => $movie->id,
+            'title' =>$movie->title, 
+            'storyline' =>$movie->storyline, 
+            'year' =>$movie->year,
+            'director' =>$movie->director,
+            'genre'=>$movie->genre
+            ]);
     }
 
     /**

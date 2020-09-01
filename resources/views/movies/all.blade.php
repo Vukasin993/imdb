@@ -7,7 +7,7 @@
     
     @foreach ($movies as $movie)
     <div class="alert alert-primary">
-        <a href="#">{{$movie->title}}</a>
+        <a href="{{route('singleMovie', ['id' => $movie->id])}}">{{$movie->title}}</a>
         <div>{{$movie->storyline}}</div>
     </div>
     @endforeach

@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/movies/all', 'MoviesController@index');
 Route::get('/movies/add', 'MoviesController@index');
+Route::get('/movies/{id}', 'MoviesController@show')->name('singleMovie');
 
 
