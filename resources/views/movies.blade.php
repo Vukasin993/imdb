@@ -12,8 +12,11 @@
     <body>
         <div>
             @foreach($movies as $movie)
-            <h1>$movie->title</h1>
-
+            <h1>{{$movie->title}}</h1>
+            <div>
+            <div>
+            {{$movie->storyline}}
+            </div>
             @endforeach
         </div>
     </body>
